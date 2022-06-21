@@ -1,8 +1,14 @@
 import "../styles/globals.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import ReactGA from "react-ga4";
 
 export default function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    ReactGA.initialize("G-WDNY0C9LKJ");
+    ReactGA.send("pageview");
+  }, []);
+
   // const router = useRouter();
 
   // useEffect(() => {
