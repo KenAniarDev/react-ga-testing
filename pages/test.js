@@ -3,7 +3,7 @@ import ReactGA from "react-ga4";
 
 export default function Test() {
   useEffect(() => {
-    ReactGA.initialize("your GA measurement id");
+    ReactGA.initialize("G-WDNY0C9LKJ");
     ReactGA.send("pageview");
   }, []);
 
