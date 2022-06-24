@@ -8,9 +8,9 @@ export default function Test() {
 
   function sendEvent() {
     ReactGA.event({
-      category: "page_view",
-      action: "your action",
-      label: "your label", // optional
+      category: "test",
+      action: "test action",
+      label: "test label", // optional
       value: 99, // optional, must be a number
       nonInteraction: true, // optional, true/false
       transport: "xhr", // optional, beacon/xhr/image
