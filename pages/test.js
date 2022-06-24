@@ -8,7 +8,7 @@ export default function Test() {
 
   function sendEvent() {
     ReactGA.event({
-      category: "test",
+      category: "testing",
       action: "test_action",
       label: "test label", // optional
       value: 99, // optional, must be a number
