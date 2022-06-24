@@ -13,6 +13,7 @@ export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
     const handleRouteChange = (url, { shallow }) => {
       // REACTGA
       // Send pageview with a custom path
