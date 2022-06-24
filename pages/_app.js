@@ -10,29 +10,29 @@ export default function MyApp({ Component, pageProps }) {
     // ReactGA.send("pageview");
   }, []);
 
-  // const router = useRouter();
+  const router = useRouter();
 
-  // useEffect(() => {
-  //   const handleRouteChange = (url, { shallow }) => {
-  //     // REACTGA
-  //     // Send pageview with a custom path
-  //     ReactGA.send({ hitType: "pageview", page: "/my-path" });
+  useEffect(() => {
+    const handleRouteChange = (url, { shallow }) => {
+      // REACTGA
+      // Send pageview with a custom path
+      ReactGA.send({ hitType: "pageview", page: url });
 
-  //     console.log(
-  //       `App is changing to ${url} ${
-  //         shallow ? "with" : "without"
-  //       } shallow routing`
-  //     );
-  //   };
+      console.log(
+        `App is changing to ${url} ${
+          shallow ? "with" : "without"
+        } shallow routing`
+      );
+    };
 
-  //   router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("routeChangeComplete", handleRouteChange);
 
-  //   // If the component is unmounted, unsubscribe
-  //   // from the event with the `off` method:
-  //   return () => {
-  //     router.events.off("routeChangeComplete", handleRouteChange);
-  //   };
-  // }, []);
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, []);
 
   return <Component {...pageProps} />;
 }
