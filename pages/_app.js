@@ -7,7 +7,7 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     ReactGA.initialize("G-WDNY0C9LKJ");
     TagManager.initialize({ gtmId: "GTM-KB72NGP" });
-    ReactGA.send("pageview");
+    // ReactGA.send("pageview");
   }, []);
 
   // const router = useRouter();

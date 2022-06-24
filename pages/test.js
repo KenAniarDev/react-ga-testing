@@ -3,8 +3,7 @@ import ReactGA from "react-ga4";
 import Script from "next/script";
 export default function Test() {
   useEffect(() => {
-    ReactGA.initialize("G-WDNY0C9LKJ");
-    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+    // ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   }, []);
 
   function sendEvent() {
@@ -20,7 +19,7 @@ export default function Test() {
 
   return (
     <div>
-      <Script
+      {/* <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-WDNY0C9LKJ"
         strategy="afterInteractive"
       />
@@ -32,7 +31,7 @@ export default function Test() {
 
           gtag('config', 'G-WDNY0C9LKJ');
         `}
-      </Script>
+      </Script> */}
       <button onClick={sendEvent}>send event</button>
     </div>
   );
