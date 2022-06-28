@@ -16,7 +16,7 @@ export default function MyApp({ Component, pageProps }) {
     console.log(document.title);
     ReactGA.send({
       hitType: "pageview",
-      page: window.location.pathnam,
+      page: window.location.pathname,
       title: document.title,
     });
 
