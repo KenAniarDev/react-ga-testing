@@ -23,7 +23,7 @@ export default function MyApp({ Component, pageProps }) {
     const handleRouteChange = (url, { shallow }) => {
       // REACTGA
       // Send pageview with a custom path
-      ReactGA.send({ hitType: "pageview", page: url, title: document.title });
+      // ReactGA.send({ hitType: "pageview", page: url, title: document.title });
 
       console.log(
         `App is changing to ${url} ${

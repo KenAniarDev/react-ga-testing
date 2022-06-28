@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import ReactGA from "react-ga4";
 import Head from "next/head";
-import Link from "next/link";
+import Link from 'next/link'
 
 export default function Test() {
   useEffect(() => {
@@ -24,9 +24,6 @@ export default function Test() {
       <Head>
         <title>Test</title>
       </Head>
-      <div>
-        <button>send event</button>
-      </div>
 
       <div>
         <Link href="/">
@@ -36,6 +33,11 @@ export default function Test() {
           <a>Test</a>
         </Link>
       </div>
+      
+      <div>
+        <button>send event</button>
+      </div>
+      
     </>
   );
 }
