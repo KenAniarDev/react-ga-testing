@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import ReactGA from "react-ga4";
-import Script from "next/script";
+import Head from "next/head";
+
 export default function Test() {
   useEffect(() => {
     // ReactGA.send({ hitType: "pageview", page: window.location.pathname });
@@ -9,7 +10,7 @@ export default function Test() {
   function sendEvent() {
     ReactGA.event({
       category: "testing",
-      action: "new_action",
+      action: "newaction",
       label: "test label", // optional
       value: 99, // optional, must be a number
       nonInteraction: true, // optional, true/false
@@ -18,21 +19,13 @@ export default function Test() {
   }
 
   return (
-    <div>
-      {/* <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-WDNY0C9LKJ"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-WDNY0C9LKJ');
-        `}
-      </Script> */}
-      <button onClick={sendEvent}>send event</button>
-    </div>
+    <>
+      <Head>
+        <title>Test</title>
+      </Head>
+      <div>
+        <button onClick={sendEvent}>send event</button>
+      </div>
+    </>
   );
 }
