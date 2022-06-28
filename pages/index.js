@@ -8,7 +8,10 @@ export default function Home() {
       <Head>
         <title>Homepage</title>
       </Head>
-      <div className={styles.container}>
+      <div>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
         <Link href="/test">
           <a>Test</a>
         </Link>
