@@ -5,7 +5,7 @@ import ReactGA from "react-ga4";
 import TagManager from "react-gtm-module";
 export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    ReactGA.initialize("G-WDNY0C9LKJ");
+    ReactGA.initialize("G-WK669GFMK8");
     // TagManager.initialize({ gtmId: "GTM-KB72NGP" });
     ReactGA.send({
       hitType: "pageview",

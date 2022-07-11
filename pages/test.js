@@ -9,6 +9,7 @@ export default function Test() {
   // }, []);
 
   function sendEvent() {
+    console.log("send event");
     ReactGA.event({
       category: "testing",
       action: "newaction",
